@@ -1,0 +1,14 @@
+2026-03-27 20:59:16.570 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-27 20:59:16.605 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 8264 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-27 20:59:16.605 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-27 20:59:16.606 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-27 20:59:17.731 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-27 20:59:17.811 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27 20:59:17.860 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-27 20:59:17.899 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-27 20:59:19.381 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27 20:59:20.223 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 4.214 seconds (process running for 5.002)
+2026-03-27 20:59:39.064 [http-nio-8080-exec-3] INFO  c.e.c.l.RequestResponseLoggingFilter 68fbd3ed-626e-41e9-954d-7dc3c1edb6b1 - HTTP POST /api/auth/login | status=200 | duration=797ms | req={
+     "email": "kartiksantwani5@gmail.com",
+  "password": "NewPassword123"
+} | res={"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYXJ0aWtzYW50d2FuaTVAZ21haWwuY29tIiwiaWF0IjoxNzc0NjI1Mzc4LCJleHAiOjE3NzQ3MTE3Nzh9.SDwGZ9jApvdh0ONNz2UKIO2qzH-fkXtIGUrIdypn9Vg"}
