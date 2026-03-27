@@ -42,4 +42,11 @@ public class User {
     @UpdateTimestamp
     @Column(nullable = false)
     private Instant updatedAt;
+
+    @Column(name = "reset_token")
+    private String resetToken;
+
+    @Column(name = "reset_token_expiry")
+    private Long resetTokenExpiry;
+
 }
