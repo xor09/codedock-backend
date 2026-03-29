@@ -7,6 +7,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -25,6 +26,8 @@ public class User {
     @UuidGenerator(style = UuidGenerator.Style.TIME)
     @Column(columnDefinition = "UUID")
     private UUID id;
+    private String otp;
+    private LocalDateTime otpExpiry;
 
     @Column(nullable = false)
     private String name;
@@ -48,5 +51,8 @@ public class User {
 
     @Column(name = "reset_token_expiry")
     private Long resetTokenExpiry;
+
+    @Column(name = "is_verified", nullable = false)
+    private boolean isVerified = false;
 
 }

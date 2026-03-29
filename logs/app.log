@@ -1,14 +1,706 @@
-2026-03-27 20:59:16.570 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
-2026-03-27 20:59:16.605 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 8264 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
-2026-03-27 20:59:16.605 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-03-27 20:59:16.606 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
-2026-03-27 20:59:17.731 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
-2026-03-27 20:59:17.811 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-27 20:59:17.860 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
-2026-03-27 20:59:17.899 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
-2026-03-27 20:59:19.381 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-27 20:59:20.223 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 4.214 seconds (process running for 5.002)
-2026-03-27 20:59:39.064 [http-nio-8080-exec-3] INFO  c.e.c.l.RequestResponseLoggingFilter 68fbd3ed-626e-41e9-954d-7dc3c1edb6b1 - HTTP POST /api/auth/login | status=200 | duration=797ms | req={
-     "email": "kartiksantwani5@gmail.com",
-  "password": "NewPassword123"
-} | res={"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYXJ0aWtzYW50d2FuaTVAZ21haWwuY29tIiwiaWF0IjoxNzc0NjI1Mzc4LCJleHAiOjE3NzQ3MTE3Nzh9.SDwGZ9jApvdh0ONNz2UKIO2qzH-fkXtIGUrIdypn9Vg"}
+2026-03-29 00:22:26.403 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 00:22:26.446 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 30472 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 00:22:26.447 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 00:22:26.448 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 00:22:27.814 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 00:22:27.909 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 00:22:27.977 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 00:22:28.018 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 00:22:29.393 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 00:22:30.291 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 4.28 seconds (process running for 8.393)
+2026-03-29 11:20:39.561 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 11:20:39.636 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 29824 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 11:20:39.637 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 11:20:39.639 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 11:20:42.239 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 11:20:42.402 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 11:20:42.580 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 11:20:42.682 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 11:20:44.622 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 11:20:45.822 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 7.126 seconds (process running for 8.688)
+2026-03-29 11:23:52.090 [http-nio-8080-exec-2] INFO  c.e.c.l.RequestResponseLoggingFilter 0d10bd80-b28c-42ad-8fd8-711401e326dd - HTTP POST /api/users/create | status=200 | duration=3567ms | req={"name":"Abhishek","email":"jabhishekkumar79@gmail.com","password":"Abhi"} | res={"id":"ac189001-9d38-1506-819d-3827e35e0000","name":"Abhishek","email":"jabhishekkumar79@gmail.com"}
+2026-03-29 12:34:40.436 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 12:34:40.559 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 26596 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 12:34:40.562 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 12:34:40.566 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 12:34:45.547 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 12:34:45.713 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 12:34:45.826 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 12:34:45.923 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 12:34:50.182 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 12:34:52.897 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 14.285 seconds (process running for 20.858)
+2026-03-29 12:35:08.567 [http-nio-8080-exec-2] INFO  c.e.c.l.RequestResponseLoggingFilter ea371a3e-f2c0-491d-9f5b-3e110c05c4a9 - HTTP POST /api/auth/forgot-password | status=200 | duration=6217ms | req={"email":"jabhishekkumar79@gmail.com"} | res={"message":"Reset link sent if email exists"}
+2026-03-29 12:39:38.127 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 12:39:38.156 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 23644 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 12:39:38.156 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 12:39:38.157 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 12:39:39.191 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 12:39:39.260 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 12:39:39.295 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 12:39:39.341 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 12:39:40.352 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 12:39:41.012 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 3.196 seconds (process running for 3.734)
+2026-03-29 12:40:38.002 [http-nio-8080-exec-2] INFO  c.e.c.l.RequestResponseLoggingFilter 2de9fccb-bc44-4201-a5fa-abbe776da402 - HTTP POST /api/auth/forgot-password | status=200 | duration=5469ms | req={"email":"jabhishekkumar79@gmail.com"} | res={"message":"Reset link sent if email exists"}
+2026-03-29 12:41:03.749 [http-nio-8080-exec-1] INFO  c.e.c.l.RequestResponseLoggingFilter 9333b003-b296-4b9f-abd4-32073b73d999 - HTTP POST /api/auth/reset-password | status=200 | duration=192ms | req={"token":"273ef06a-0f85-4928-8239-05eb4f9823c7","newPassword":"Abhi45"} | res={"message":"Password updated successfully"}
+2026-03-29 12:41:22.539 [http-nio-8080-exec-7] INFO  c.e.c.l.RequestResponseLoggingFilter caf2f1cd-ef30-4233-87dc-349d5e45d3d2 - HTTP POST /api/auth/login | status=200 | duration=186ms | req={"email":"jabhishekkumar79@gmail.com","password":"Abhi45"} | res={"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWJoaXNoZWtrdW1hcjc5QGdtYWlsLmNvbSIsImlhdCI6MTc3NDc2ODI4MiwiZXhwIjoxNzc0ODU0NjgyfQ.zyvPpX8dX0jUw0EONPvFlBDUdsO9lkjX2Ts7wNFxdZ8"}
+2026-03-29 12:41:55.107 [http-nio-8080-exec-5] WARN  c.e.c.e.GlobalExceptionHandler 3a3568d5-c5c8-46a6-8151-4eeb5cccb9d1 - Auth failure for POST /api/auth/login
+2026-03-29 12:41:55.124 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver 3a3568d5-c5c8-46a6-8151-4eeb5cccb9d1 - Resolved [com.example.codedockbackend.exception.InvalidCredentialsException: Invalid email or password]
+2026-03-29 12:41:55.124 [http-nio-8080-exec-5] INFO  c.e.c.l.RequestResponseLoggingFilter 3a3568d5-c5c8-46a6-8151-4eeb5cccb9d1 - HTTP POST /api/auth/login | status=401 | duration=164ms | req={"email":"jabhishekkumar79@gmail.com","password":"abhi"} | res={"timestamp":"2026-03-29T07:11:55.107581200Z","status":401,"error":"Unauthorized","message":"Invalid email or password","path":"/api/auth/login"}
+2026-03-29 12:50:16.344 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 23644 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 12:50:16.344 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 12:50:16.344 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 12:50:17.216 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 12:50:17.345 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 12:50:17.362 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 12:50:17.612 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 12:50:18.664 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 2.4 seconds (process running for 641.391)
+2026-03-29 12:52:20.143 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 23644 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 12:52:20.144 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 12:52:20.144 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 12:52:20.969 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 12:52:21.028 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 12:52:21.043 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 12:52:21.261 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 12:52:21.328 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes\com\example\codedockbackend\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authService': Resolution of declared constructors on bean Class [com.example.codedockbackend.service.AuthService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1d0cf8f6] failed
+2026-03-29 12:52:21.445 [restartedMain] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes\com\example\codedockbackend\controller\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'authService': Resolution of declared constructors on bean Class [com.example.codedockbackend.service.AuthService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1d0cf8f6] failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.codedockbackend.CodedockBackendApplication.main(CodedockBackendApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authService': Resolution of declared constructors on bean Class [com.example.codedockbackend.service.AuthService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1d0cf8f6] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/example/codedockbackend/service/EmailService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3375)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2557)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379)
+	... 37 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.codedockbackend.service.EmailService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 41 common frames omitted
+2026-03-29 12:52:25.060 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 23644 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 12:52:25.060 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 12:52:25.060 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 12:52:25.761 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 12:52:25.805 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 12:52:25.810 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 12:52:26.444 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 12:52:27.044 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 2.063 seconds (process running for 769.776)
+2026-03-29 12:53:04.140 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 12:53:04.170 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 31924 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 12:53:04.171 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 12:53:04.171 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 12:53:05.200 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 12:53:05.273 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 12:53:05.307 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 12:53:05.335 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 12:53:06.316 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 12:53:06.996 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 3.188 seconds (process running for 3.666)
+2026-03-29 12:53:43.695 [http-nio-8080-exec-1] INFO  c.e.c.l.RequestResponseLoggingFilter 4e981519-17c5-4c1e-9d88-5faa7c58501b - HTTP POST /api/auth/forgot-password | status=200 | duration=6286ms | req={"email":"jabhishekkumar79@gmail.com"} | res={"message":"Reset link sent if email exists"}
+2026-03-29 12:55:40.379 [http-nio-8080-exec-4] INFO  c.e.c.l.RequestResponseLoggingFilter 2f3da544-3fdd-48d3-a69a-a00213b9a1db - HTTP POST /api/auth/forgot-password | status=200 | duration=5235ms | req={"email":"jabhishekkumar79@gmail.com"} | res={"message":"Reset link sent if email exists"}
+2026-03-29 13:00:34.823 [http-nio-8080-exec-5] INFO  c.e.c.l.RequestResponseLoggingFilter f1ff2f9d-6b12-4c10-8f46-ae9fb49d9f5c - HTTP POST /api/auth/reset-password | status=200 | duration=210ms | req={"token":"5f92ca68-0342-423a-af35-3ebefd2ae1b5","newPassword":"abhi"} | res={"message":"Password updated successfully"}
+2026-03-29 13:32:51.532 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool  - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m15s477ms673µs700ns).
+2026-03-29 14:02:48.002 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 14:02:48.051 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 11540 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 14:02:48.052 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 14:02:48.053 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 14:02:49.448 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 14:02:49.531 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 14:02:49.589 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 14:02:49.619 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 14:02:50.838 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 14:02:50.940 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl  - GenerationTarget encountered exception accepting command : Error executing DDL "alter table if exists users add column is_verified boolean not null" via JDBC [ERROR: column "is_verified" of relation "users" contains null values]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table if exists users add column is_verified boolean not null" via JDBC [ERROR: column "is_verified" of relation "users" contains null values]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:583)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:523)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:341)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:84)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:240)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:119)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.codedockbackend.CodedockBackendApplication.main(CodedockBackendApplication.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "is_verified" of relation "users" contains null values
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:312)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 42 common frames omitted
+2026-03-29 14:02:51.736 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 4.402 seconds (process running for 6.378)
+2026-03-29 14:09:06.383 [http-nio-8080-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper c01f4bf2-f011-4385-b775-8fe6e8b7b129 - SQL Error: 0, SQLState: 42703
+2026-03-29 14:09:06.383 [http-nio-8080-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper c01f4bf2-f011-4385-b775-8fe6e8b7b129 - ERROR: column u1_0.is_verified does not exist
+  Position: 43
+2026-03-29 14:09:06.399 [http-nio-8080-exec-7] ERROR c.e.c.e.GlobalExceptionHandler c01f4bf2-f011-4385-b775-8fe6e8b7b129 - Unhandled exception for POST /api/users/create
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id,u1_0.created_at,u1_0.email,u1_0.is_verified,u1_0.name,u1_0.otp,u1_0.otp_expiry,u1_0.password,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.updated_at from users u1_0 where u1_0.email=?] [ERROR: column u1_0.is_verified does not exist
+  Position: 43] [n/a]; SQL [n/a]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:277)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy132.findByEmail(Unknown Source)
+	at com.example.codedockbackend.service.UserService.createUser(UserService.java:23)
+	at com.example.codedockbackend.controller.UserController.createUser(UserController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.codedockbackend.logging.RequestResponseLoggingFilter.doFilter(RequestResponseLoggingFilter.java:34)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.codedockbackend.logging.MdcFilter.doFilter(MdcFilter.java:30)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.codedockbackend.security.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:47)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.id,u1_0.created_at,u1_0.email,u1_0.is_verified,u1_0.name,u1_0.otp,u1_0.otp_expiry,u1_0.password,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.updated_at from users u1_0 where u1_0.email=?] [ERROR: column u1_0.is_verified does not exist
+  Position: 43] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:265)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:145)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:67)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:204)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:211)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:139)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:382)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:302)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:526)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:418)
+	at jdk.proxy4/jdk.proxy4.$Proxy143.getSingleResult(Unknown Source)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:169)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 121 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: column u1_0.is_verified does not exist
+  Position: 43
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 159 common frames omitted
+2026-03-29 14:09:06.467 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver c01f4bf2-f011-4385-b775-8fe6e8b7b129 - Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id,u1_0.created_at,u1_0.email,u1_0.is_verified,u1_0.name,u1_0.otp,u1_0.otp_expiry,u1_0.password,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.updated_at from users u1_0 where u1_0.email=?] [ERROR: column u1_0.is_verified does not exist<EOL>  Position: 43] [n/a]; SQL [n/a]]
+2026-03-29 14:09:06.481 [http-nio-8080-exec-7] INFO  c.e.c.l.RequestResponseLoggingFilter c01f4bf2-f011-4385-b775-8fe6e8b7b129 - HTTP POST /api/users/create | status=500 | duration=743ms | req={
+  "name": "Test User",
+  "email": "805141206a@gmail.com",
+  "password": "password123"
+} | res={"timestamp":"2026-03-29T08:39:06.399954Z","status":500,"error":"Internal Server Error","message":"JDBC exception executing SQL [select u1_0.id,u1_0.created_at,u1_0.email,u1_0.is_verified,u1_0.name,u1_0.otp,u1_0.otp_expiry,u1_0.password,u1_0.reset_token,u1_0.reset_token_expiry,u1_0.updated_at from users u1_0 where u1_0.email=?] [ERROR: column u1_0.is_verified does not exist\n  Position: 43] [n/a]; SQL [n/a]","path":"/api/users/create"}
+2026-03-29 14:12:22.214 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 14:12:22.245 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 16788 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 14:12:22.246 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 14:12:22.247 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 14:12:23.229 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 14:12:23.295 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 14:12:23.336 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 14:12:23.369 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 14:12:24.379 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 14:12:25.092 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 3.214 seconds (process running for 3.68)
+2026-03-29 14:12:36.952 [http-nio-8080-exec-3] INFO  c.e.c.l.RequestResponseLoggingFilter 61587ec1-0aa5-4a3a-b57f-06c19ac9a4ae - HTTP POST /api/users/create | status=200 | duration=4973ms | req={
+  "name": "Test User",
+  "email": "805141206a@gmail.com",
+  "password": "password123"
+} | res={"id":"ac189001-9d38-1231-819d-38c2526e0000","name":"Test User","email":"805141206a@gmail.com"}
+2026-03-29 14:13:04.913 [http-nio-8080-exec-4] INFO  c.e.c.l.RequestResponseLoggingFilter 574879e7-d32a-4f81-a066-7c53603924ee - HTTP POST /api/auth/verify-otp | status=200 | duration=18ms | req={
+  "email": "805141206a@gmail.com",
+  "otp": "928572"
+} | res=Email verified successfully
+2026-03-29 14:18:22.785 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 14:18:22.817 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 17764 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 14:18:22.817 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 14:18:22.818 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 14:18:23.830 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 14:18:23.892 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 14:18:23.924 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 14:18:23.955 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 14:18:25.009 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 14:18:25.071 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper  - SQL Warning Code: 0, SQLState: 00000
+2026-03-29 14:18:25.071 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper  - constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2026-03-29 14:18:25.735 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 3.329 seconds (process running for 3.801)
+2026-03-29 14:19:09.445 [http-nio-8080-exec-4] INFO  c.e.c.l.RequestResponseLoggingFilter ea119f77-6367-4f76-bc88-f10ebc0036ec - HTTP POST /api/users/create | status=200 | duration=4537ms | req={
+  "name": "Test User",
+  "email": "jabhishekkumar79@gmail.com",
+  "password": "password123"
+} | res={"id":"ac189001-9d38-17b1-819d-38c850a10000","name":"Test User","email":"jabhishekkumar79@gmail.com"}
+2026-03-29 14:19:35.024 [http-nio-8080-exec-5] ERROR c.e.c.e.GlobalExceptionHandler c4ad0af7-5b7e-4a10-80da-94dbf7528069 - Unhandled exception for POST /api/auth/verify-otp
+java.lang.RuntimeException: Invalid OTP
+	at com.example.codedockbackend.service.OtpService.verifyOtp(OtpService.java:33)
+	at com.example.codedockbackend.controller.AuthController.verifyOtp(AuthController.java:65)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.codedockbackend.logging.RequestResponseLoggingFilter.doFilter(RequestResponseLoggingFilter.java:34)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.codedockbackend.logging.MdcFilter.doFilter(MdcFilter.java:30)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.codedockbackend.security.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:47)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-03-29 14:19:35.033 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver c4ad0af7-5b7e-4a10-80da-94dbf7528069 - Resolved [java.lang.RuntimeException: Invalid OTP]
+2026-03-29 14:19:35.033 [http-nio-8080-exec-5] INFO  c.e.c.l.RequestResponseLoggingFilter c4ad0af7-5b7e-4a10-80da-94dbf7528069 - HTTP POST /api/auth/verify-otp | status=500 | duration=26ms | req={
+  "email": "805141206a@gmail.com",
+  "otp": "766806"
+} | res={"timestamp":"2026-03-29T08:49:35.024591300Z","status":500,"error":"Internal Server Error","message":"Invalid OTP","path":"/api/auth/verify-otp"}
+2026-03-29 14:19:54.959 [http-nio-8080-exec-6] INFO  c.e.c.l.RequestResponseLoggingFilter d13d6072-d37b-487b-ae6c-30cc5ad9fc9c - HTTP POST /api/auth/verify-otp | status=200 | duration=9ms | req={
+  "email": "jabhishekkumar79@gmail.com",
+  "otp": "766806"
+} | res=Email verified successfully
+2026-03-29 19:22:04.055 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-29 19:22:04.092 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Starting CodedockBackendApplication using Java 17.0.18 with PID 34272 (C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend\target\classes started by karti in C:\Users\karti\OneDrive\Documents\HavinCode\codedock-backend)
+2026-03-29 19:22:04.092 [restartedMain] DEBUG c.e.c.CodedockBackendApplication  - Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-03-29 19:22:04.093 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - No active profile set, falling back to 1 default profile: "default"
+2026-03-29 19:22:05.344 [restartedMain] DEBUG c.e.c.security.JwtAuthFilter  - Filter 'jwtAuthFilter' configured for use
+2026-03-29 19:22:05.422 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-29 19:22:05.485 [restartedMain] INFO  org.hibernate.Version  - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-03-29 19:22:05.527 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator  - HHH000026: Second-level cache disabled
+2026-03-29 19:22:06.747 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-29 19:22:07.565 [restartedMain] INFO  c.e.c.CodedockBackendApplication  - Started CodedockBackendApplication in 3.959 seconds (process running for 4.784)
+2026-03-29 19:22:25.682 [http-nio-8080-exec-2] INFO  c.e.c.l.RequestResponseLoggingFilter 9758d0c8-b6aa-41f6-be78-c826203d30d0 - HTTP POST /api/users/create | status=200 | duration=6672ms | req={"name":"Abhishek","email":"kartiksantwani5@gmail.com","password":"Abhi"} | res={"id":"ac189001-9d39-1dbc-819d-39ddf25c0000","name":"Abhishek","email":"kartiksantwani5@gmail.com"}
+2026-03-29 19:22:52.326 [http-nio-8080-exec-4] WARN  c.e.c.e.GlobalExceptionHandler 47fb7066-e260-4fb2-ba3a-23c4e314f023 - Auth failure for POST /api/auth/login
+2026-03-29 19:22:52.345 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver 47fb7066-e260-4fb2-ba3a-23c4e314f023 - Resolved [com.example.codedockbackend.exception.InvalidCredentialsException: Invalid email or password]
+2026-03-29 19:22:52.345 [http-nio-8080-exec-4] INFO  c.e.c.l.RequestResponseLoggingFilter 47fb7066-e260-4fb2-ba3a-23c4e314f023 - HTTP POST /api/auth/login | status=401 | duration=163ms | req={"email":"jabhishekkumar79@gmail.com","password":"Abhi"} | res={"timestamp":"2026-03-29T13:52:52.326316200Z","status":401,"error":"Unauthorized","message":"Invalid email or password","path":"/api/auth/login"}
+2026-03-29 19:32:53.010 [http-nio-8080-exec-6] ERROR c.e.c.e.GlobalExceptionHandler f62d7fe3-7d31-46e4-940e-b45ab33a75a4 - Unhandled exception for POST /api/users/create
+java.lang.RuntimeException: Email already exists
+	at com.example.codedockbackend.service.UserService.createUser(UserService.java:24)
+	at com.example.codedockbackend.controller.UserController.createUser(UserController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.codedockbackend.logging.RequestResponseLoggingFilter.doFilter(RequestResponseLoggingFilter.java:34)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at com.example.codedockbackend.logging.MdcFilter.doFilter(MdcFilter.java:30)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.example.codedockbackend.security.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:47)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-03-29 19:32:53.010 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver f62d7fe3-7d31-46e4-940e-b45ab33a75a4 - Resolved [java.lang.RuntimeException: Email already exists]
+2026-03-29 19:32:53.010 [http-nio-8080-exec-6] INFO  c.e.c.l.RequestResponseLoggingFilter f62d7fe3-7d31-46e4-940e-b45ab33a75a4 - HTTP POST /api/users/create | status=500 | duration=24ms | req={"name":"Kartik","email":"kartiksantwani5@gmail.com","password":"Ab"} | res={"timestamp":"2026-03-29T14:02:53.010584400Z","status":500,"error":"Internal Server Error","message":"Email already exists","path":"/api/users/create"}
+2026-03-29 19:34:49.898 [http-nio-8080-exec-7] INFO  c.e.c.l.RequestResponseLoggingFilter ba59a18c-0cf2-49ec-8ed4-a6d8794d2fb1 - HTTP POST /api/users/create | status=200 | duration=4930ms | req={"name":"Kartik","email":"kartiksantwani5@gmail.com","password":"Ab"} | res={"id":"ac189001-9d39-1dbc-819d-39e950d60001","name":"Kartik","email":"kartiksantwani5@gmail.com"}
+2026-03-29 19:35:11.826 [http-nio-8080-exec-9] INFO  c.e.c.l.RequestResponseLoggingFilter fc1e23ad-ce29-4693-a219-eeb89e01f3fa - HTTP POST /api/auth/verify-otp | status=200 | duration=49ms | req={"email":"kartiksantwani5@gmail.com","otp":"244305"} | res=Email verified successfully

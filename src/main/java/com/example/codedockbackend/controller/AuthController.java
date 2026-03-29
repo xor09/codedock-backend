@@ -7,6 +7,7 @@ import com.example.codedockbackend.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.example.codedockbackend.service.OtpService;
 
 import java.util.Map;
 
@@ -16,6 +17,7 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthService authService;
+    private final OtpService otpService;
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
@@ -50,5 +52,23 @@ public class AuthController {
         return ResponseEntity.ok(
                 Map.of("message", "Password updated successfully")
         );
+    }
+
+    @PostMapping("/send-otp")
+    public ResponseEntity<?> sendOtp(@RequestBody Map<String, String> body) {
+        otpService.generateAndSendOtp(body.get("email"));
+        return ResponseEntity.ok("OTP sent successfully");
+    }
+
+    @PostMapping("/verify-otp")
+    public ResponseEntity<?> verifyOtp(@RequestBody Map<String, String> body) {
+        otpService.verifyOtp(body.get("email"), body.get("otp"));
+        return ResponseEntity.ok("Email verified successfully");
+    }
+
+    @PostMapping("/resend-otp")
+    public ResponseEntity<?> resendOtp(@RequestBody Map<String, String> body) {
+        otpService.generateAndSendOtp(body.get("email")); // reuses same logic
+        return ResponseEntity.ok("OTP resent successfully");
     }
 }
