@@ -27,6 +27,10 @@ public class AuthService {
                         new RuntimeException("Invalid credentials")
                 );
 
+        if (!user.isVerified()) {
+            throw new RuntimeException("Email not verified. Please verify your email first.");
+        }
+
         if (!passwordEncoder.matches(
                 request.getPassword(), user.getPassword()
         )) {
@@ -44,9 +48,12 @@ public class AuthService {
         // Do not reveal user existence
         if (user == null) return;
 
+        if (!user.isVerified()) {
+            throw new RuntimeException("Email not verified. Please verify your email first.");
+        }
+
         String token = UUID.randomUUID().toString();
 
-        System.out.println("This is token abhi" + token);
 
         user.setResetToken(token);
         user.setResetTokenExpiry(System.currentTimeMillis() + (1000 * 60 * 15)); // 15 min

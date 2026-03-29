@@ -21,13 +21,25 @@ public class UserService {
     public CreateUserResponse createUser(CreateUserRequest request) {
 
         if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            User existingUser = userRepository.findByEmail(request.getEmail()).get();
+
+            if (!existingUser.isVerified()) {
+                // Update password with new one in case user changed it
+                existingUser.setPassword(encoder.encode(request.getPassword()));
+                existingUser.setName(request.getName()); // update name too
+                userRepository.save(existingUser);
+                // Resend fresh OTP for unverified account
+                otpService.generateAndSendOtp(request.getEmail());
+                throw new RuntimeException("Account exists but not verified. A new OTP has been sent to your email.");
+            }
+
             throw new RuntimeException("Email already exists");
         }
 
         User user = User.builder()
                 .name(request.getName())
                 .email(request.getEmail())
-                .password(encoder.encode(request.getPassword())) // hash password
+                .password(encoder.encode(request.getPassword()))
                 .isVerified(false)
                 .build();
 
