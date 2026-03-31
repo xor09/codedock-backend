@@ -37,4 +37,5 @@ build/
 application-local.yml
 runners/work/
 .jar
+/logs
 
