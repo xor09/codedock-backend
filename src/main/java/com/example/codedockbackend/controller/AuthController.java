@@ -1,10 +1,13 @@
 package com.example.codedockbackend.controller;
 
+import com.example.codedockbackend.dto.ForgotPasswordRequest;
 import com.example.codedockbackend.dto.LoginRequest;
+import com.example.codedockbackend.dto.ResetPasswordRequest;
 import com.example.codedockbackend.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.example.codedockbackend.service.OtpService;
 
 import java.util.Map;
 
@@ -14,6 +17,7 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthService authService;
+    private final OtpService otpService;
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
@@ -21,7 +25,50 @@ public class AuthController {
         String token = authService.login(request);
 
         return ResponseEntity.ok(
+
                 Map.of("token", token)
         );
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<?> forgotPassword(@RequestBody ForgotPasswordRequest request) {
+
+        authService.forgotPassword(request.getEmail());
+
+        return ResponseEntity.ok(
+                Map.of("message", "Reset link sent if email exists")
+
+        );
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<?> resetPassword(@RequestBody ResetPasswordRequest request) {
+
+        authService.resetPassword(
+                request.getToken(),
+                request.getNewPassword()
+        );
+
+        return ResponseEntity.ok(
+                Map.of("message", "Password updated successfully")
+        );
+    }
+
+    @PostMapping("/send-otp")
+    public ResponseEntity<?> sendOtp(@RequestBody Map<String, String> body) {
+        otpService.generateAndSendOtp(body.get("email"));
+        return ResponseEntity.ok("OTP sent successfully");
+    }
+
+    @PostMapping("/verify-otp")
+    public ResponseEntity<?> verifyOtp(@RequestBody Map<String, String> body) {
+        otpService.verifyOtp(body.get("email"), body.get("otp"));
+        return ResponseEntity.ok("Email verified successfully");
+    }
+
+    @PostMapping("/resend-otp")
+    public ResponseEntity<?> resendOtp(@RequestBody Map<String, String> body) {
+        otpService.generateAndSendOtp(body.get("email")); // reuses same logic
+        return ResponseEntity.ok("OTP resent successfully");
     }
 }
