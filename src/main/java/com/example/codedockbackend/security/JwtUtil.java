@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.util.Date;
+import java.util.Map;
 
 @Component
 public class JwtUtil {
@@ -32,14 +33,25 @@ public class JwtUtil {
     }
 
     public String generateToken(String email) {
-        return Jwts.builder()
+        return generateToken(email, null);
+    }
+
+    public String generateToken(String email, String role) {
+        JwtBuilder builder = Jwts.builder()
                 .setSubject(email)
                 .setIssuedAt(new Date())
                 .setExpiration(
                         new Date(System.currentTimeMillis() + expirationMs)
-                )
-                .signWith(signingKey, SignatureAlgorithm.HS256)
-                .compact();
+                );
+
+        if (role != null && !role.isBlank()) {
+            builder.addClaims(Map.of(
+                    "role", role,
+                    "accountType", role
+            ));
+        }
+
+        return builder.signWith(signingKey, SignatureAlgorithm.HS256).compact();
     }
 
     public String extractEmail(String token) {
@@ -49,6 +61,17 @@ public class JwtUtil {
                 .parseClaimsJws(token)
                 .getBody()
                 .getSubject();
+    }
+
+    public String extractRole(String token) {
+        Object role = Jwts.parserBuilder()
+                .setSigningKey(signingKey)
+                .build()
+                .parseClaimsJws(token)
+                .getBody()
+                .get("role");
+
+        return role != null ? role.toString() : null;
     }
 
     public boolean isTokenValid(String token) {

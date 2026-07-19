@@ -5,13 +5,18 @@ import com.example.codedockbackend.dto.RunResponse;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
-import java.time.Instant;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.*;
 
 @Service
 public class DockerRunnerService {
+
+    private static final int DEFAULT_TIMEOUT_SECONDS = 5;
+    private static final int MAX_TIMEOUT_SECONDS = 10;
+    private static final int MAX_OUTPUT_CHARS = 20_000;
 
     private final Path runnersPath;
     private final ExecutorService pool = Executors.newFixedThreadPool(4);
@@ -25,7 +30,7 @@ public class DockerRunnerService {
 
     public RunResponse run(String lang, RunRequest req) throws Exception {
 
-        String runId = "run-" + Instant.now().getEpochSecond();
+        String runId = "run-" + UUID.randomUUID();
         Path jobDir = runnersPath.resolve(runId);
         Files.createDirectories(jobDir);
 
@@ -42,7 +47,7 @@ public class DockerRunnerService {
         Path stdinFile = jobDir.resolve("stdin.txt");
         Files.writeString(stdinFile, req.stdin == null ? "" : req.stdin);
 
-        int timeout = req.timeoutSeconds != null ? req.timeoutSeconds : 5;
+        int timeout = sanitizeTimeout(req.timeoutSeconds);
 
         List<String> command = List.of(
                 "bash",
@@ -64,20 +69,80 @@ public class DockerRunnerService {
 
         Process process = pb.start();
 
-        Future<String> output = pool.submit(() -> {
-            try (InputStream is = process.getInputStream()) {
-                return new String(is.readAllBytes());
-            }
-        });
+        Future<CapturedOutput> output = pool.submit(() -> captureOutput(process.getInputStream()));
 
         boolean finished = process.waitFor(timeout + 2, TimeUnit.SECONDS);
+        if (!finished) {
+            process.destroyForcibly();
+            process.waitFor(2, TimeUnit.SECONDS);
+        }
 
-        String out = output.get(1, TimeUnit.SECONDS);
+        CapturedOutput capturedOutput;
+        try {
+            capturedOutput = output.get(2, TimeUnit.SECONDS);
+        } catch (TimeoutException ex) {
+            output.cancel(true);
+            capturedOutput = new CapturedOutput("", true);
+        }
+
+        String out = capturedOutput.value();
+        if (capturedOutput.truncated()) {
+            out = out + "\n[output truncated after " + MAX_OUTPUT_CHARS + " characters]";
+        }
+
+        boolean timedOut = !finished;
+        int exitCode = timedOut ? -1 : process.exitValue();
+        String stderr = classifyExecutionError(exitCode, timedOut);
 
         return new RunResponse(
-                finished ? process.exitValue() : -1,
+                exitCode,
                 out,
-                finished ? "" : "Timeout"
+                stderr
         );
+    }
+
+    private String classifyExecutionError(int exitCode, boolean timedOut) {
+        if (timedOut || exitCode == 124) {
+            return "Time Limit Exceeded (TLE)";
+        }
+
+        if (exitCode == 137 || exitCode == 143) {
+            return "Memory Limit Exceeded (MLE)";
+        }
+
+        return "";
+    }
+
+    private int sanitizeTimeout(Integer requestedTimeout) {
+        int timeout = requestedTimeout != null ? requestedTimeout : DEFAULT_TIMEOUT_SECONDS;
+        return Math.min(Math.max(timeout, 1), MAX_TIMEOUT_SECONDS);
+    }
+
+    private CapturedOutput captureOutput(InputStream inputStream) throws IOException {
+        try (InputStream is = inputStream) {
+            ByteArrayOutputStream buffer = new ByteArrayOutputStream(MAX_OUTPUT_CHARS);
+            byte[] chunk = new byte[4096];
+            int total = 0;
+            boolean truncated = false;
+            int read;
+
+            while ((read = is.read(chunk)) != -1) {
+                int remaining = MAX_OUTPUT_CHARS - total;
+                if (remaining > 0) {
+                    int bytesToWrite = Math.min(read, remaining);
+                    buffer.write(chunk, 0, bytesToWrite);
+                    total += bytesToWrite;
+                }
+
+                if (read > remaining) {
+                    truncated = true;
+                }
+            }
+
+            return new CapturedOutput(buffer.toString(StandardCharsets.UTF_8), truncated);
+        }
+    }
+
+    private record CapturedOutput(String value, boolean truncated) {
     }
 }

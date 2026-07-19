@@ -3,6 +3,7 @@ package com.example.codedockbackend.service;
 import com.example.codedockbackend.dto.LoginRequest;
 import com.example.codedockbackend.exception.InvalidCredentialsException;
 import com.example.codedockbackend.model.User;
+import com.example.codedockbackend.model.UserRole;
 import com.example.codedockbackend.repository.UserRepository;
 import com.example.codedockbackend.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
@@ -37,7 +38,12 @@ public class AuthService {
             throw new InvalidCredentialsException();
         }
 
-        return jwtUtil.generateToken(user.getEmail());
+        if (user.getRole() == null) {
+            user.setRole(UserRole.STUDENT);
+            userRepository.save(user);
+        }
+
+        return jwtUtil.generateToken(user.getEmail(), user.getRole().name());
     }
 
     public void forgotPassword(String email) {

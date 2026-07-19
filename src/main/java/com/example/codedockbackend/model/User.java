@@ -38,6 +38,9 @@ public class User {
     @Column(nullable = false)
     private String password; // hashed password
 
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
+
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
     private Instant createdAt;
@@ -54,5 +57,13 @@ public class User {
 
     @Column(name = "is_verified", nullable = false)
     private boolean isVerified = false;
+
+    @PrePersist
+    @PreUpdate
+    private void ensureRole() {
+        if (role == null) {
+            role = UserRole.STUDENT;
+        }
+    }
 
 }
