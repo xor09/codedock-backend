@@ -4,6 +4,7 @@ import com.example.codedockbackend.dto.CreateUserRequest;
 import com.example.codedockbackend.service.OtpService;
 import com.example.codedockbackend.dto.CreateUserResponse;
 import com.example.codedockbackend.model.User;
+import com.example.codedockbackend.model.UserRole;
 import com.example.codedockbackend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -27,6 +28,7 @@ public class UserService {
                 // Update password with new one in case user changed it
                 existingUser.setPassword(encoder.encode(request.getPassword()));
                 existingUser.setName(request.getName()); // update name too
+                existingUser.setRole(UserRole.from(request.getRole()));
                 userRepository.save(existingUser);
                 // Resend fresh OTP for unverified account
                 otpService.generateAndSendOtp(request.getEmail());
@@ -40,6 +42,7 @@ public class UserService {
                 .name(request.getName())
                 .email(request.getEmail())
                 .password(encoder.encode(request.getPassword()))
+                .role(UserRole.from(request.getRole()))
                 .isVerified(false)
                 .build();
 
@@ -51,6 +54,7 @@ public class UserService {
                 .id(user.getId())
                 .name(user.getName())
                 .email(user.getEmail())
+                .role(user.getRole().name())
                 .build();
     }
 }

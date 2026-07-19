@@ -1,0 +1,15 @@
+package com.example.codedockbackend.model;
+
+public enum UserRole {
+    STUDENT,
+    TEACHER,
+    ADMIN;
+
+    public static UserRole from(String value) {
+        if (value == null || value.isBlank()) {
+            return STUDENT;
+        }
+
+        return UserRole.valueOf(value.trim().toUpperCase());
+    }
+}
